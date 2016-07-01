@@ -48,6 +48,7 @@
     _Note: Adjust the values for `$JAVA_HOME` and `$CATALINA_HOME` according to your installation._
 
     **Recommended:** add an `admin` user with password to access the Manager Webapp
+    and a separate `deploy` user for the manager-script role.[[1](http://stackoverflow.com/questions/32230962/mvn-tomcat7deploy-cannot-invoke-tomcat-manager-broken-pipe)]
     ```
     sudo vi $CATALINA_HOME/conf/tomcat-users.xml
     ...
@@ -55,7 +56,10 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
                   version="1.0">
-        <user username="admin" password="password" roles="manager-gui,admin-gui"/>
+       <role rolename="manager-gui"/>
+       <user username="admin" password="password" roles="manager-gui,admin-gui"/>
+       <role rolename="manager-script"/>
+       <user username="deploy" password="password" roles="manager-script"/>
     </tomcat-users>
     ```
 
