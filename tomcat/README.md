@@ -75,4 +75,4 @@
     ```
     _Note: you should be able to see the Tomcat landing page at http://localhost:8080 on your browser._
 
-    Follow the instructions to [deploy a new app](http://localhost:8080/docs/manager-howto.html#Deploy_A_New_Application_from_a_Local_Path).
+    Follow the instructions to [deploy a new app](http://tomcat.apache.org/tomcat-8.5-doc/manager-howto.html#Deploy_A_New_Application_from_a_Local_Path).
